@@ -1,4 +1,7 @@
 EXTRA_CFLAGS += -Os
+ifneq ($(CONFIG_RK_FPGA),y)
+obj-y += clock.o
+endif
 obj-$(CONFIG_RK29_LAST_LOG) += last_log.o
 obj-$(CONFIG_USB_GADGET) += usb_detect.o
 obj-$(CONFIG_RK29_VPU) += vpu_service.o
