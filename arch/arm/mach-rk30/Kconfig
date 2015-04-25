@@ -88,6 +88,9 @@ config MACH_RK30_BOX
 config MACH_RK30_CHIRIMEN
 	bool "MozOpenHard CHIRIMEN"
 
+config MACH_RK30_OPENWEBBOARD
+	bool "KDDI Open Web Board"
+
 endchoice
 
 choice
