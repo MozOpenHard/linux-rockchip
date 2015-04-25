@@ -45,6 +45,7 @@ board-$(CONFIG_MACH_RK30_PHONE_A22) += board-rk30-phone-a22.o board-rk30-phone-a
 #$_rbox_$_modify_$_begin
 board-$(CONFIG_MACH_RK30_BOX) += board-rk30-box.o
 #$_rbox_$_modify_$_end
+board-$(CONFIG_MACH_RK30_CHIRIMEN) += board-rk30-chirimen.o
 
 obj-$(CONFIG_SOC_RK3028) += board.o
 board-$(CONFIG_MACH_RK3028_TB) += board-rk3028-tb.o

@@ -84,6 +84,10 @@ config MACH_RK30_Z600T
         bool "RK30 Z600T smart phone pad board"
 config MACH_RK30_BOX
         bool "RK30 Box Board"
+
+config MACH_RK30_CHIRIMEN
+	bool "MozOpenHard CHIRIMEN"
+
 endchoice
 
 choice
