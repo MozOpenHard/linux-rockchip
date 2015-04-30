@@ -218,7 +218,7 @@ static int __devinit rk30_hdmi_probe (struct platform_device *pdev)
 	}
 	
 	#ifdef CONFIG_RK_HDMI_GPIO_CEC
-	GPIO_CecInit(RK30_PIN2_PA0);
+	GPIO_CecInit(RK30_PIN6_PB4);
 	#endif
 	dev_info(&pdev->dev, "rk30 hdmi probe sucess.\n");
 	return 0;
