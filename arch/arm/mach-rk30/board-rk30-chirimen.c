@@ -522,11 +522,6 @@ static struct i2c_board_info __initdata i2c2_info[] = {
 };
 #endif
 
-#ifdef CONFIG_I2C3_RK30
-static struct i2c_board_info __initdata i2c3_info[] = {
-};
-#endif
-
 #ifdef CONFIG_EEPROM_AT24
 static struct at24_platform_data at24c16 = {
 	.byte_len	= SZ_16K / 8,
@@ -556,9 +551,6 @@ static void __init rk30_i2c_register_board_info(void)
 #endif
 #ifdef CONFIG_I2C2_RK30
 	i2c_register_board_info(2, i2c2_info, ARRAY_SIZE(i2c2_info));
-#endif
-#ifdef CONFIG_I2C3_RK30
-	i2c_register_board_info(3, i2c3_info, ARRAY_SIZE(i2c3_info));
 #endif
 #ifdef CONFIG_I2C4_RK30
 	i2c_register_board_info(4, i2c4_info, ARRAY_SIZE(i2c4_info));
