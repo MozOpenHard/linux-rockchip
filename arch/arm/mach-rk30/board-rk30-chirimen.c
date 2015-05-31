@@ -224,7 +224,6 @@ static struct platform_device device_lcdc0 = {
 
 #ifdef CONFIG_LEDS_GPIO_PLATFORM
 static struct gpio_led rk29_leds[] = {
-#if 0
 	{
 		.name = "chirimen:green:user",
 		.gpio = RK30_PIN6_PB3,
@@ -232,7 +231,6 @@ static struct gpio_led rk29_leds[] = {
 		.retain_state_suspended = 0,
 		.default_state = LEDS_GPIO_DEFSTATE_ON,
 	},
-#endif
 };
 
 static struct gpio_led_platform_data rk29_leds_pdata = {
