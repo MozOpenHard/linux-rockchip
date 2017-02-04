@@ -511,6 +511,9 @@ static int fb_show_logo_line(struct fb_info *info, int rotate,
 		image.dx = 0;
 		image.dy = y;
 	}
+#elif defined(CONFIG_LOGO_CHIRIMEN_CLUT224)
+	image.dx = (info->var.xres - logo->width) / 2;
+	image.dy = (info->var.yres - logo->height) / 2;
 #else
 	image.dx = 0;
 	image.dy = y;
@@ -687,6 +690,8 @@ int fb_show_logo(struct fb_info *info, int rotate)
 			      num_online_cpus());
 
 	}
+#elif defined(CONFIG_LOGO_CHIRIMEN_CLUT224)
+	y = fb_show_logo_line(info, rotate, fb_logo.logo, 0, 1);
 #else
 	y = fb_show_logo_line(info, rotate, fb_logo.logo, 0,
 			      num_online_cpus());
